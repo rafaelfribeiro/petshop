@@ -1,0 +1,42 @@
+﻿<Window x:Name="windowMain" x:Class="Petshop.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Petshop.Views"
+        mc:Ignorable="d"
+        Title="Petshop Control" MinHeight="300" Height="Auto" MinWidth="400" Width="Auto" WindowStartupLocation="CenterOwner" Icon="/Views/dog.png" Closing="windowMain_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" Margin="0,0,0,388" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <MenuItem Header="_Arquivo">
+                <MenuItem x:Name="menuHome" Header="_Home" Click="menuHome_Click"/>
+                <MenuItem x:Name="menuSair" Header="_Sair" Click="menuSair_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Manter">
+                <MenuItem Header="_Pessoa">
+                    <MenuItem x:Name="menuCliente" Header="_Cliente" Click="menuCliente_Click" />
+                    <MenuItem x:Name="menuFuncionario" Header="_Funcionário" Click="menuFuncionario_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="menuAnimal" Header="_Animal" Click="menuAnimal_Click"/>
+                <MenuItem x:Name="menuServico" Header="_Serviço" Click="menuServico_Click"/>
+                <MenuItem x:Name="menuAtendimento" Header="_Atendimento" Click="menuAtendimento_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Listar">
+                <MenuItem Header="_Pessoa">
+                    <MenuItem x:Name="menuListarCliente" Header="_Cliente" Click="menuListarCliente_Click"/>
+                    <MenuItem x:Name="menuListarFuncionario" Header="_Funcionário" Click="menuListarFuncionario_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="menuListarAnimal" Header="_Animal" Click="menuListarAnimal_Click"/>
+                <MenuItem x:Name="menuListarServico" Header="_Serviço" Click="menuListarServico_Click"/>
+                <MenuItem x:Name="menuListaAtendimento" Header="_Atendimento" Click="menuListaAtendimento_Click"/>
+            </MenuItem>
+            <Separator/>
+            <MenuItem x:Name="menuitemAP" Header="_A+" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Click="menuitemAP_Click"/>
+            <MenuItem x:Name="menuitemAM"  Header="_A-" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Click="menuitemAM_Click"/>
+        </Menu>
+        <Frame x:Name="Main" Margin="0,30,0,0" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>
